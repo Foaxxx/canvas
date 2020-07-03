@@ -4,6 +4,16 @@ boton.addEventListener("click", dibujoporclick);
 var aa = document.getElementById("recarga");
 aa.addEventListener("click", mandale);
 
+var c1 = document.getElementById("color1").value;
+var c2 = document.getElementById("color2").value; //llamamiento a la seleccion de colores
+var c3 = document.getElementById("color3").value;
+var c4 = document.getElementById("color4").value;
+var co1 = c1;
+var co2 = c2;
+var co3 = c3;
+var co4 = c4;
+
+
 var d = document.getElementById("dibujito"); // metodo del documeto para traer un elemento por su Id, en este caso, dibujito, que
 //corresponde a la etiqueta canvas 
 var ancho = d.width;
@@ -17,9 +27,8 @@ function mandale()
 
 function dibujoporclick(parseInt)
 {
-    
 
-var x = parseInt(texto.value);
+var x = (texto.value);
 var espacio = ancho / x;
 
 
@@ -42,32 +51,32 @@ while (l < lineas)
 {
     yi = espacio * l;
     xf = espacio * (l + 1);
-    dibujarLinea("green", 0, yi ,xf, 300);
+    dibujarLinea(co1, 0, yi ,xf, 300);
     console.log("linea " + l);
-    l = l + 1;
+    l = l + 0.5;
 }
 while (l2 < lineas2)
 {
     yi2 = espacio * (l2 - 1);
     xf2 = 300 - (l2 * espacio);
-    dibujarLinea("red", 299,yi2,xf2,299);
-    l2 = l2 + 1;
+    dibujarLinea(co2, 299,yi2,xf2,299);
+    l2 = l2 + 0.5;
 }
 
 while(l3 < lineas3)
 {
     xi = l3 * espacio;
     yf = l3 * espacio;
-    dibujarLinea("yellow",xi,0,300,yf);
-    l3 = l3 + 1;
+    dibujarLinea(co3,xi,0,300,yf);
+    l3 = l3 + 0.5;
 }
 
 while(l4 < lineas4)
 {
     xi2 = 300 - (l4 * espacio);
     yf2 = espacio * (l4 + 1);
-    dibujarLinea("blue", xi2,0,0,yf2);
-    l4 = l4 + 1;
+    dibujarLinea(co4, xi2,0,0,yf2);
+    l4 = l4 + 0.5;
     
 }
 
