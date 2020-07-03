@@ -8,10 +8,7 @@ var c1 = document.getElementById("color1").value;
 var c2 = document.getElementById("color2").value; //llamamiento a la seleccion de colores
 var c3 = document.getElementById("color3").value;
 var c4 = document.getElementById("color4").value;
-var co1 = c1;
-var co2 = c2;
-var co3 = c3;
-var co4 = c4;
+
 
 
 var d = document.getElementById("dibujito"); // metodo del documeto para traer un elemento por su Id, en este caso, dibujito, que
